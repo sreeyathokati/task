@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <style>
+        nav span {
+            padding: 10px;
+            font-size: 17px;
+            text-align: center;
+        }
+
+        .body-header {
+            background-image: url(./background.jpg);
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .form-card {
+            width: 500px;
+        }
+
+        .form {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            margin-top: 20px;
+        }
+
+        .about {
+            background-color: #633994;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+
+        }
+
+        .profile {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            margin-top: 40px;
+        }
+
+        .advantages {
+            display: grid;
+            grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .hex-grid {
+            display: flex;
+            margin-top: -30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .hex {
+            width: 120px;
+            height: 138px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .uses {
+            background-image: url(./help.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+        }
+
+        .visa1,
+        .visa2,
+        .visa3,
+        .visa4,
+        .visa5,
+        .visa6,
+        .visa7,
+        .visa8 {
+            background-image: url(./visa-prob-spr.png);
+            width: 85px;
+            height: 62px;
+            display: inline-block;
+            background-repeat: no-repeat;
+        }
+
+        .visa1 {
+            background-position: 0 0;
+        }
+
+        .visa2 {
+            background-position: 0 -70px;
+        }
+
+        .visa3 {
+            background-position: 0 -136px;
+        }
+
+        .visa4 {
+            background-position: 0 -209px;
+        }
+
+        .visa5 {
+            background-position: 0 -277px;
+        }
+
+        .visa6 {
+            background-position: 0 -344px;
+        }
+
+        .visa7 {
+            background-position: 0 -415px;
+        }
+
+        .visa8 {
+            background-position: 0 -480px;
+        }
+
+        .visaing-prob {
+            padding: 30px 0px;
+            text-align: center;
+            position: relative;
+            height: 250px;
+            background: #fff;
+        }
+
+        .visaing-prob h2 {
+            color: #131b42;
+        }
+
+        .visaing-prob-img {
+            width: 12.5%;
+            float: left;
+            position: relative;
+            padding: 35px 0px;
+        }
+
+        .visaing-prob-img p {
+            color: #6b6b6b;
+            font-size: 15px;
+            position: absolute;
+            top: 110px;
+            right: 0;
+            left: 0;
+        }
+
+        .whatsapp {
+            background-image: url(./whatsup.jpg);
+            background-position: center center;
+            background-size: 100% 100%;
+            position: relative;
+            text-align: center;
+            padding-bottom: 70px;
+            padding-top: 15px;
+        }
+
+        #footer {
+            width: 100%;
+            float: left;
+            min-height: 300px;
+            background: #131B42;
+        }
+
+        #footer .cols {
+            width: 19%;
+            margin: 0 1% 0 0;
+            min-height: 250px;
+            float: left;
+        }
+
+        #footer .cols h2 {
+            font-size: 18px;
+            color: #FFF;
+            padding: 10px;
+        }
+
+        #footer .cols ul {
+            float: left;
+        }
+
+        #footer .cols ul li {
+            font-size: 13px;
+            padding: 0 0 0 10px;
+            line-height: 24px;
+        }
+
+        #footer .cols ul li a {
+            color: #FFF;
+        }
+
+        #footer .cols ul li a:hover {
+            color: #fff600;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex justify-content-between p-3">
+        <div>
+            <img src="./logo.png" width="150px" height="90px" class="p-2" alt="">
+            <span class="border-light p-2"> Meet India´s Leading Overseas Career Company</span>
+            <img src="./merit.png" class="p-2" width="100px" height="90px" alt="">
+        </div>
+        <div class="p-4">
+            <span class="bi bi-facebook bg-primary text-white p-2"></span>
+            <span class="bi bi-twitter bg-info text-white p-2 mx-2"></span>
+            <span class="bi bi-linkedin bg-primary text-white p-2"></span>
+            <span class="bi bi-google bg-danger text-white p-2 mx-2"></span>
+        </div>
+    </header>
+    <nav class="bg-dark text-light py-2">
+        <span>Home</span>
+        <span>Countries</span>
+        <span>For Students</span>
+        <span> For Universities</span>
+        <span>online Store</span>
+        <span> Immigration </span>
+        <span> Blog </span>
+        <span>Gallary</span>
+        <span> Accociate</span>
+        <span> Franchise</span>
+        <span> Careers </span>
+        <span> Contact as</span>
+        <span> Login </span>
+        <span class="bi bi-search"></span>
+    </nav>
+    <section class="body-header text-center">
+        <div class=" bg-warning text-light p-2 form-card">
+            <div class="border border-light p-3">
+                <h2>Start Your Career Search</h2>
+                <h5>I am interested in <input type="text" class="form bg-warning w-25"></h6>
+                    <h5>services in <input type="text" class="form bg-warning"></h6>
+                        <button class="btn btn-danger border-light mt-5"> Search</button>
+            </div>
+        </div>
+    </section>
+    <section class="about text-light p-5 ">
+        <div class="me-5 ">
+            <h2>Overseas Education Consultants</h2>
+            <div class="d-flex justify-content-around">
+                <img src="./about.png" width="250px" height="200" alt="">
+                <p class="pt-4"> Prosper Overseas is the <span class="text-danger">Best Overseas Career Consultants In
+                        India</span>,
+                    we visae 12 branches across
+                    India. A flagship of Prosper Education Pvt Ltd, Prosper Overseas in India is a well-known overseas
+                    education consultant. Authorised Representative for more than 500 plus renowned institutions across
+                    the globe. Prosper Overseas is the trusted name in India & is well Recognised & Accredited by
+                    various High Commission & Visa Consulates. </p>
+            </div>
+        </div>
+        <div class="">
+            <h2> Search a Course</h2>
+            <select name="country" class="ms-5 text-secondary p-2 form-select w-50 my-3" id="">
+                <option value="country" class="text-secundary p-2"> -- Select Country --</option>
+            </select>
+            <select name="country" class="ms-5 text-secondary p-2 form-select w-50 my-3" id="">
+                <option value="country" class="ms-5 text-secoundary p-2 form-select"> -- Select Study Level --</option>
+            </select>
+            <input type="text" class="form-control w-50 ms-5" placeholder="Type Only Program Name">
+            <button class="btn btn-danger border-light mt-4 ms-5"> Submit</button>
+        </div>
+    </section>
+    <section class=" m-5">
+        <h2>Free Profile Evaluation</h2>
+        <div class="profile">
+            <div>
+                <img src="./profile.jpg" width="300px" height="250" alt="">
+            </div>
+            <div class="">
+                <p>
+                    <b>Universities as per your profile.</b>This tool evaluates your profile and gives you a shortlist
+                    of
+                    universities byselecting that profile from the database
+                    which exactly or closely matches your profile.This tool evaluates your profile and gives you a
+                    shortlist
+                    of universities by selecting that profile from
+                    the database which exactly or closelymatches your profileThis tool evaluates your profile and gives
+                    you
+                    a shortlist of universities by selecting that
+                    profile from the database which exactly or closely matches your profile.This tool evaluates your
+                    profile
+                    and gives you a shortlist of universities by selecting that profile from
+                    the database which exactly or closelymatches your profile.
+                </p>
+                <p>
+                    This tool evaluates your profile and gives you a shortlist of universities by
+                    selecting that profile from the database which exactly or closely matches your profile This tool
+                    evaluates your profile and gives you a shortlist of
+                    universities by.selecting that profile from the database which exactly or closely matches your
+                    profile This tool evaluates your profile and gives you a shortlist of
+                    universities by.selecting that profile from the database which exactly or closely matches your
+                    profile This tool evaluates your profile and gives you a shortlist of
+                    universities by.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light advantages p-3 my-3">
+        <div>
+            <i class="bi bi-bank2 fw-bold fs-1"></i>
+            <h5 class="text-warning"> 3000+</h5>
+            <p> Universities
+                Processed</p>
+        </div>
+        <div>
+            <i class="bi bi-list-task fw-bold fs-1"></i>
+            <h5 class="text-warning "> 3000+</h5>
+            <p> Programs
+                Available</p>
+        </div>
+        <div>
+            <i class="bi bi-flag-fill fw-bold fs-1"></i>
+            <h5 class="text-warning"> 21</h5>
+            <p> Countries
+                Representive</p>
+        </div>
+        <div>
+            <i class="bi bi-mortarboard-fill fw-bold fs-1"></i>
+            <h5 class="text-warning"> 75000+</h5>
+            <p> Students
+                Counseled</p>
+        </div>
+        <div>
+            <i class="bi bi-credit-card-fill fw-bold fs-1"></i>
+            <h5 class="text-warning"> 100% </h5>
+            <p> VISA
+                Success Rate</p>
+        </div>
+        <div>
+            <i class="bi bi-people-fill fw-bold fs-1"></i>
+            <h5 class="text-warning"> 90% </h5>
+            <p> Students
+                Referaled</p>
+        </div>
+        <div>
+            <i class="bi bi-currency-dollar fw-bold fs-1"></i>
+            <h5 class="text-warning"> 100% </h5>
+            <p> Bank Loan
+                Available</p>
+        </div>
+    </section>
+
+    <section class="uses py-5 text-light text-center">
+        <h3>Top Services Which Helps You To Study In Abroad</h3>
+        <div class="container pt-5">
+            <div>
+                <div class="hex-grid">
+                    <div class="hex">Student Login Portal</div>
+                    <div class="hex">Application Status</div>
+                    <div class="hex">Eligibility</div>
+                    <div class="hex">Scholarships</div>
+                    <div class="hex">Online Store Shopping</div>
+                </div>
+                <div class="hex-grid">
+                    <div class="hex">Travel and Foreign Exchange</div>
+                    <div class="hex">VISA Processing Guide</div>
+                    <div class="hex">In House Test Preparation</div>
+                    <div class="hex">Pick Up and Accommodation</div>
+                </div>
+                <div class="hex-grid">
+                    <div class="hex">Mock Interviews</div>
+                    <div class="hex">Document Preparation</div>
+                    <div class="hex">Education Loans</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="visaing-prob mb-5">
+        <div class="container">
+            <h2>visaing Problems With Your <span style="color:#cf543f">Study Visa ?</span> <span class="special">7 Easy
+                    Steps</span> <span style="color:#cf543f">Get Visa</span></h2>
+            <div>
+                <div class="visaing-prob-img">
+                    <div class="visa1">
+                        <p>Free<br>Counsiling</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa2">
+                        <p>Submit<br>Documents</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa3">
+                        <p>Accept<br>Admission</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa4">
+                        <p>Fee<br>Submission</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa5">
+                        <p>Visa<br>Documentation</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa6">
+                        <p>Interview<br>Training</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa7">
+                        <p>Get<br>VISA</p>
+                    </div>
+                </div>
+                <div class="visaing-prob-img">
+                    <div class="visa8">
+                        <p>Fly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="whatsapp text-light mt-5">
+        <div class="container">
+            <img src="./whatsup-logo.png">
+            <h4>Connect With Our Experts On Whatsapp<br>&amp; Get Your Queries Resolved</h4>
+            <h5>+91-9642212288</h5>
+
+            <button class="btn btn-outline-light mt-4"> Contact Us</button>
+        </div>
+    </section>
+    <section class="text-center pt-4 my-5 border">
+        <h3> University Testimonials </h3>
+        <h6> -- Videos --</h6>
+    </section>
+    <section class="text-center pt-4 border my-5">
+        <h3> Student Testimonials </h3>
+        <h6> -- Videos --</h6>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="cols">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="#">Mission &amp;Objectives</a></li>
+                    <li><a href="#">About Prosper Overseas</a></li>
+                    <li><a href="#">CMD Message</a></li>
+                    <li><a href="#">Prosper Governance policy</a></li>
+                    <li><a href="#">Corporate Resposibility</a></li>
+                    <li><a href="#">Social Initiatives</a></li>
+                </ul>
+            </div>
+
+            <div class="cols">
+                <h2>Country Websites</h2>
+                <ul>
+                    <li><a href="#">USA</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">Australia</a></li>
+                    <li><a href="#">UK</a></li>
+                    <li><a href="#">Ireland</a></li>
+                    <li><a href="#">NewZealand</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Switzerland</a></li>
+                    <li><a href="#">Malaysia</a></li>
+                    <li><a href="#">Cyprus</a></li>
+                    <li><a href="#">Dubai</a></li>
+                    <li><a href="#">Germany</a></li>
+                    <li><a href="#">Denmark</a></li>
+                    <li><a href="#">Holland</a></li>
+                    <li><a href="#">Italy</a></li>
+                    <li><a href="#">European Union</a></li>
+                </ul>
+            </div>
+
+            <div class="cols">
+                <h2>Online</h2>
+                <ul>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Feedback</a></li>
+
+                    <li><a href="javascript:void(0);" onclick="login_open()" class="elements">Student Login</a></li>
+                </ul>
+            </div>
+
+            <div class="cols">
+                <h2>News &amp;Events</h2>
+                <ul>
+                    <li><a href="#">Prosper Overseas Events</a></li>
+                    <li><a href="#">Spot Admissions</a></li>
+                    <li><a href="#">Photo Gallery</a></li>
+                    <li><a href="#">Video Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="cols">
+                <h2>Usefull Links</h2>
+                <ul>
+                    <li><a href="#">Sailent Features</a></li>
+
+                    <li><a href="#">Cost of Education</a></li>
+                    <li><a href="#">Blog</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
